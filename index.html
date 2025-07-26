@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js" defer></script>
+</head>
+<body>
+    <h1>Projeto de Orçamento de Marmoraria</h1>
+    <p>Este é um projeto de exemplo para calcular o orçamento de marmoraria.</p>
+
+    <div>
+        <form id="budgetForm">
+            <label for="material">Tipo de Material:</label>
+            <select id="material" name="material" class='select'>
+                <option value="" default>Selecione um material</option>
+                <option value="granite">Granito</option>
+                <option value="marble">Mármore</option>
+                <option value="quartz">Quartzo</option>
+            </select>
+
+            <label for="finish">Quantidade de chapas em estoque:</label>
+            <input type="number" id="qt_chapas" name="finish" required>
+
+            <label for="price">Preço por m²:</label>
+            <input type="number" id="price" name="price" required step="0.01">
+
+
+            <label for="area">Área (m²):</label>
+            <input type="number" id="area" name="area" required step="0.01">
+
+            <button type="submit">Calcular Orçamento</button>
+            <button type="button" id="clearBtn">Limpar Formulário</button>
+        </form>
+
+        <div id="result">
+            <h2>Resultado do Orçamento</h2>
+            <p id="budgetOutput"></p>
+        </div>
+
+</body>
+</html>
